@@ -1,0 +1,16 @@
+const express = require('express');
+const router = express.Router();
+
+router.get('/', (req, res) => {
+  res.json('Fetching all users');
+});
+
+router.post('/', (req, res) => {
+  res.json('Adding a new user');
+});
+
+router.get('/:id', (req, res) => {
+  res.json(`Fetching user with ID: ${req.params.id}`);
+});
+
+module.exports = router;
